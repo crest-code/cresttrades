@@ -1,0 +1,37 @@
+Sat, 21 Dec 2019 08:35:43 GMT: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","fatal":true}
+Thu, 26 Dec 2019 01:44:45 GMT: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","fatal":true}
+Thu, 26 Dec 2019 06:33:10 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Thu, 26 Dec 2019 06:33:10 GMT: "Verification Email sending error"
+Thu, 26 Dec 2019 06:33:10 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Fri, 27 Dec 2019 16:13:23 GMT: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","fatal":true}
+Wed, 01 Jan 2020 15:53:36 GMT: {"errno":"ECONNREFUSED","code":"ECONNREFUSED","syscall":"connect","address":"127.0.0.1","port":3306,"fatal":true}
+Fri, 03 Jan 2020 05:42:58 GMT: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)","sqlState":"28000","fatal":true}
+Sat, 04 Jan 2020 06:39:12 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sat, 04 Jan 2020 06:39:12 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sat, 04 Jan 2020 06:39:12 GMT: "Verification Email sending error"
+Sat, 04 Jan 2020 06:39:34 GMT: {"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlMessage":"Unknown column 'firstname' in 'field list'","sqlState":"42S22","index":0,"sql":"SELECT uID, firstname, lastname, username, phone, email, address, profile_picture FROM users WHERE username='Tehmi2000'"}
+Sat, 04 Jan 2020 06:40:47 GMT: {"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlMessage":"Unknown column 'firstname' in 'field list'","sqlState":"42S22","index":0,"sql":"SELECT uID, firstname, lastname, username, phone, email, address, profile_picture FROM users WHERE username='Tehmi2000'"}
+Sat, 04 Jan 2020 06:42:10 GMT: {"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlMessage":"Unknown column 'firstname' in 'field list'","sqlState":"42S22","index":0,"sql":"SELECT uID, firstname, lastname, username, phone, email, address, profile_picture FROM users WHERE username='tehmi2000'"}
+Sat, 04 Jan 2020 06:43:10 GMT: {"code":"ER_BAD_FIELD_ERROR","errno":1054,"sqlMessage":"Unknown column 'firstname' in 'field list'","sqlState":"42S22","index":0,"sql":"SELECT uID, firstname, lastname, username, phone, email, address, profile_picture FROM users WHERE username='tehmi2000'"}
+Sat, 04 Jan 2020 06:54:26 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sat, 04 Jan 2020 06:54:26 GMT: "Verification Email sending error"
+Sat, 04 Jan 2020 06:54:26 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sat, 04 Jan 2020 18:44:54 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sat, 04 Jan 2020 18:44:54 GMT: "Verification Email sending error"
+Sat, 04 Jan 2020 18:44:54 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sat, 04 Jan 2020 18:50:30 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sat, 04 Jan 2020 18:50:30 GMT: "Verification Email sending error"
+Sat, 04 Jan 2020 18:50:30 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sun, 05 Jan 2020 03:14:37 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sun, 05 Jan 2020 03:14:37 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sun, 05 Jan 2020 03:14:37 GMT: "Verification Email sending error"
+Sun, 05 Jan 2020 03:22:18 GMT: {"code":"ER_NO_SUCH_TABLE","errno":1146,"sqlMessage":"Table 'crest_db.users' doesn't exist","sqlState":"42S02","index":0,"sql":"SELECT username, email FROM users WHERE username=\"Tehmi2000\" OR email=\"tehmi2000@gmail.com\""}
+Sun, 05 Jan 2020 03:22:54 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sun, 05 Jan 2020 03:22:54 GMT: "Verification Email sending error"
+Sun, 05 Jan 2020 03:22:54 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sun, 05 Jan 2020 03:39:41 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sun, 05 Jan 2020 03:39:41 GMT: "Verification Email sending error"
+Sun, 05 Jan 2020 03:39:41 GMT: {"errno":"ECONNREFUSED","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}
+Sun, 16 Feb 2020 02:44:56 GMT: {"errno":-4058,"code":"ENOENT","syscall":"open","path":"C:\\Users\\Hp\\Desktop\\Project 2\\Crest\\modules\\templates\\account_verify.html"}
+Sun, 16 Feb 2020 02:45:01 GMT: "Verification Email sending error"
+Sun, 16 Feb 2020 02:45:01 GMT: {"errno":"ETIMEOUT","code":"EDNS","syscall":"queryA","hostname":"smtp.gmail.com","command":"CONN"}

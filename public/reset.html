@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Reset</title>
+    <link rel="shortcut icon" href="/assets/images/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fullHeader.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="/assets/icofont/icofont.min.css">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <style>
+        #login-form input[type="email"]{
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid #aaa;
+            padding: 1.5rem 2rem;
+            margin: 0.9rem 0 2.5rem 0;
+            background-color: transparent;
+        }
+    </style>
+
+    <header class="cols">
+        <div class="top-tab rows">
+            <div class="trademark rows">
+                <img src="/assets/images/crest-logo-white.png" alt="" class="logo">
+                <div class="cols">
+                    <div class="brand-name">CrestTrade</div>
+                    <span>Earn on digital forex, binary option trade, financial solution...</span>
+                </div>
+            </div>
+
+            <div>
+                <button class="strip-btn icofont-navigation-menu"></button>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="rows">
+                <li><a href="/" class="strip-link">Home</a></li>
+                <li><a href="/support#faq" class="strip-link">FAQs</a></li>
+                <li><a href="/register" class="strip-link">Register</a></li>
+                <li><a href="/login" class="strip-link">Login</a></li>
+                <li><a href="#" class="strip-link">Privacy Policy</a></li>
+                <li><a href="#" class="strip-link">Terms and Conditions</a></li>
+                <li><a href="/support" class="strip-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Get a new password</h1>
+
+        <form action="/resetHandler" method="post" id="login-form">
+            <div id="error"></div>
+            <label for="">Email Address</label>
+            <input type="email" name="reset-email" placeholder="Your email address">
+            <input type="submit" value="Reset Password">
+        </form>
+        <div class="rows">
+            <a href="/login">Go to Login</a>
+            <a href="/register">Sign up instead</a>
+        </div>
+    </main>
+
+    <footer class="cols">
+        <div class="links rows">
+            <div class="cols">
+                <span class="heading"><img src="/assets/images/crest-logo.png" alt="" class="icon"></span>
+                <span class="heading">Contact:</span>
+                <a href="#">Address: 189 Greenwich st, New York, NY 10007, USA</a>
+                <a href="#">Email: support@cresttrades.com</a>
+                <a href="#">24/7 customer support and live chat</a>
+            </div>
+    
+            <div class="cols">
+                <span class="heading">Our Sectional Address</span>
+                <a href="#">Address: 234 Sherman Street Lawrence, KS 76044</a>
+                <a href="#">24/7 customer support and live chat</a>
+                <img src="./assets/images/SSS-Copy-Copy.png" alt="">
+            </div>
+
+            <div class="cols">
+                <a href="/">Home</a>
+                <a href="/support">Our Team</a>
+                <a href="#">Why we are different</a>
+                <a href="#">Terms and Condition</a>
+            </div>
+
+            <div class="cols">
+                <span class="heading">Our Payment Gateway</span>
+                <div class="rows">
+                    <img src="./assets/images/bitcoin-Copy-Copy.png"  alt="" class="pay-gateway">
+                    <img src="./assets/images/perfect-Copy-Copy.png" alt="" class="pay-gateway">
+                    <img src="./assets/images/skrill-Copy-Copy.png" alt="" class="pay-gateway">
+                    <img src="./assets/images/western-Copy-Copy.png" alt="" class="pay-gateway">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="fill-container">
+            <span class="rows">Copyright &copy; 2019 CrestTrades.com. All rights reserved</span>
+        </div>
+    </footer>
+
+    <script>
+        const err_image = `<i class="icofont-close-circled"></i>`;
+        const site_query = get_query()["idn"];
+        if(site_query && site_query === "novalid"){
+            // console.log(site_query);
+            document.querySelector("form #error").innerHTML = err_image + ' <div>No account registered to that email!</div>';
+            document.querySelector("form #error").classList.toggle("serror", true);
+        }
+    </script>
+</body>
+</html>

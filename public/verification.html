@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Verify your account</title>
+    <link rel="shortcut icon" href="/assets/images/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fullHeader.css">
+    <!-- <link rel="stylesheet" href="/css/login.css"> -->
+    <link rel="stylesheet" href="/assets/icofont/icofont.min.css">
+    <script src="/js/main.js"></script>
+</head>
+<body>
+    <style>
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 2rem !important;
+        }
+
+        main h1{
+            font-weight: 500;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 2.5rem;
+            max-width: 88%;
+            text-align: center;
+            color: #333;
+        }
+
+        main .avatar{
+            /* background-color: rgb(255, 132, 208); */
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image: url("../assets/images/anime-girl-wink-3.png");
+            background-size: cover;
+            background-position: bottom ;
+            background-repeat: no-repeat;
+        }
+
+        span.affirm{
+            color: dodgerblue;
+            font-size: 5rem;
+            margin: 0;
+        }
+
+        #redirect-home{
+            vertical-align: middle;
+            text-decoration: none;
+            background-color: dodgerblue;
+            color: white;
+            font-size: 1.5rem;
+            padding: 1.7rem 3rem;
+            margin-top: 2rem;
+            border-radius: 3px;
+            box-shadow: 1px 2px 3px #988;
+        }
+
+        #redirect-home:hover i::after{
+            content: "\eaa0";
+        }
+
+        #redirect-home + *{
+            font-size: 1.2rem;
+            margin-top: 3rem;
+        }
+
+        footer{
+            background-color: #f7f7f9;
+        }
+
+        @media only screen and (max-width:800px){
+            main h1{
+                font-size: 2rem;
+            }
+
+            span.affirm{
+                font-size: 3rem;
+                margin: 0;
+            }
+        }
+    </style>
+
+    <header class="cols">
+        <div class="top-tab rows">
+            <div class="trademark rows">
+                <img src="/assets/images/crest-logo-white.png" alt="" class="logo">
+                <div class="cols">
+                    <div class="brand-name">CrestTrade</div>
+                    <span>Earn on digital forex, binary option trade, financial solution...</span>
+                </div>
+            </div>
+
+            <div>
+                <button class="strip-btn icofont-navigation-menu"></button>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="rows">
+                <li class="active"><a href="/" class="strip-link">Home</a></li>
+                <li><a href="#" class="strip-link">FAQs</a></li>
+                <li><a href="/register" class="strip-link">Register</a></li>
+                <li><a href="/login" class="strip-link">Login</a></li>
+                <li><a href="#" class="strip-link">Privacy Policy</a></li>
+                <li><a href="#" class="strip-link">Terms and Conditions</a></li>
+                <li><a href="#" class="strip-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <span class="icofont-check-circled affirm"></span>
+        <!-- <span class="avatar"></span> -->
+        <h1>A verification email has been sent to your inbox!</h1>
+        <a href="#" id="redirect-home"><i class="icofont-"></i>Continue to Login</a>
+        <div>
+            <span>Didn't receive an email? <a href="#">Resend</a></span>
+        </div>
+    </main>
+
+    <footer class="cols">
+        <div class="links rows">
+            <div class="cols">
+                <span class="heading"><img src="/assets/images/crest-logo.png" alt="" class="icon"></span>
+                <span class="heading">Contact:</span>
+                <a href="#">Address: 189 Greenwich st, New York, NY 10007, USA</a>
+                <a href="#">Email: support@cresttrades.com</a>
+                <a href="#">24/7 customer support and live chat</a>
+            </div>
+    
+            <div class="cols">
+                <span class="heading">Our Sectional Address</span>
+                <a href="#">Address: 234 Sherman Street Lawrence, KS 76044</a>
+                <a href="#">24/7 customer support and live chat</a>
+                <img src="./assets/images/SSS-Copy-Copy.png" alt="">
+            </div>
+
+            <div class="cols">
+                <a href="/">Home</a>
+                <a href="/support">Our Team</a>
+                <a href="#">Why we are different</a>
+                <a href="#">Terms and Condition</a>
+            </div>
+
+            <div class="cols">
+                <span class="heading">Our Payment Gateway</span>
+                <div class="rows">
+                    <img src="./assets/images/bitcoin-Copy-Copy.png"  alt="" class="pay-gateway">
+                    <img src="./assets/images/perfect-Copy-Copy.png" alt="" class="pay-gateway">
+                    <img src="./assets/images/skrill-Copy-Copy.png" alt="" class="pay-gateway">
+                    <img src="./assets/images/western-Copy-Copy.png" alt="" class="pay-gateway">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="fill-container">
+            <span class="rows">Copyright &copy; 2019 CrestTrades.com. All rights reserved</span>
+        </div>
+    </footer>
+
+    <script>
+        const query = getQuery();
+        let redirect_url = "?redirect=true&";
+
+        for (const key in query) {
+            redirect_url += `${key}=${query[key]}&`;
+        }
+        const redirectButton = document.querySelector("#redirect-home");
+        redirectButton.setAttribute("href", `/dashboard${redirect_url}`);
+        console.log(redirect_url);
+    </script>
+</body>
+</html>

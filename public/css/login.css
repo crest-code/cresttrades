@@ -1,0 +1,118 @@
+/* DARK SHADE WHITE = #f2f2f5
+   LIGHT SHADE WHITE = #fcfcff*/
+
+body{
+    background-color: #f2f2f5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/gVB9K3O-city-night-wallpaper.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/images/gVB9K3O-city-night-wallpaper.jpg");
+    overflow-x: hidden;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< MAIN >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+main{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    /* box-shadow: 1px 1px 3px rgba(224, 224, 229, 0.87); */
+    background-color: transparent;
+}
+
+main h1{
+    text-align: center;
+}
+
+main *{
+    color: #6f6666;
+}
+
+main form{
+    width: 500px;
+    width: 35vw;
+    display:flex;
+    flex-direction: column;
+    margin: 2rem auto 1rem auto;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+form .serror{
+    font-size: 1.3rem;
+    border-radius: 3px;
+    background-color: rgba(255, 91, 26, 0.5);
+    margin: 0.7rem auto 3rem auto;
+    padding: 0.8rem;
+}
+
+.serror, .serror *{
+	color: rgb(255, 230, 230);
+}
+
+.serror [class^="icofont-"]{
+    font-size: 1.6rem;
+    margin-right: 0.6rem; 
+}
+
+#login-form input[type="text"], #login-form input[type="password"]{
+    width: 100%;
+    /* border: none; */
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    padding: 1.5rem 2rem;
+    margin: 0.9rem 0 2.5rem 0;
+    background-color: transparent;
+}
+
+#login-form input[type="submit"]{
+    width: 100%;
+    border: none;
+    background-color: #2961d8;
+    color: #fcfcff;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0 0.9rem 0;
+    box-shadow: 1px 1px 2px rgba(34, 34, 209, 0.65);
+}
+
+#login-form label{
+    font-weight: 500;
+    color: #444;
+    font-size: 12px;
+}
+
+#login-form + div{
+    width: 35vw;
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+#login-form+div a{
+    font-weight: 500;
+    color: #5388fa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+@media only screen and (max-width:800px){
+    main form{
+        width: 80vw;
+    }
+
+    form .serror{
+    }
+    
+    .serror .icofont-close-circled{
+    }
+
+    #login-form+div{
+        width: 80vw;
+    }
+}

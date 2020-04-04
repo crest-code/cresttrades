@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrestTrades | Create Account</title>
+    <link rel="shortcut icon" href="/assets/images/fav-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fullHeader.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="/assets/icofont/icofont.min.css">
+    <script src="/js/lib/greensock/minified/gsap.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/signup.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js" async defer></script>
+</head>
+<body>
+    <style>
+        .required{
+            color: red;
+        }
+    </style>
+    
+    <header class="cols">
+        <div class="top-tab rows">
+            <div class="trademark rows">
+                <img src="/assets/images/crest-logo-white.png" alt="" class="logo">
+                <div class="cols">
+                    <div class="brand-name">CrestTrade</div>
+                    <span>Earn on digital forex, binary option trade, financial solution...</span>
+                </div>
+            </div>
+  
+            <div>
+                <button class="strip-btn icofont-navigation-menu"></button>
+            </div>
+        </div>
+  
+        <nav>
+            <ul class="rows">
+                <li><a href="/" class="strip-link">Home</a></li>
+                <li><a href="/support#faq" class="strip-link">FAQs</a></li>
+                <li class="active"><a href="/register" class="strip-link">Register</a></li>
+                <li><a href="/login" class="strip-link">Login</a></li>
+                <li><a href="#" class="strip-link">Privacy Policy</a></li>
+                <li><a href="#" class="strip-link">Terms and Conditions</a></li>
+                <li><a href="/support" class="strip-link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <main>
+        <!--  -->
+        <div class="form-wrapper rows">
+            
+            <div class="cols" data-anim-container>
+                <h1>Hi</h1>
+                <h1>Let's show you what we are all about</h1>
+                <h1>CrestTrades.com</h1>
+                <div class="cols pane-container">
+                    <div class="pane"></div>
+                    <h3>We help you grow</h3>
+                    <div class="pane"></div>
+                    <h3>We can make you financially free</h3>
+                    <div class="pane"></div>
+                    <h3>We are always here to support you</h3>
+                </div>
+                <noscript style="opacity: 1 !important; text-align: center; display: block;">Your browser doesnt support javascript</noscript>
+            </div>
+
+            <form action="/register" method="post" id="sign-up-form">
+                <h2 class="form-heading">Register</h2>
+                <div class="rows form-container">
+                    <div class="form-pane">
+                        <div class="cols">
+                            <label for="">Fullname</label>
+                            <input type="text" name="user-fullname" placeholder="Your Fullname">
+                        </div>
+
+                        <div class="cols">
+                            <label for="">User Name <i class="required">*</i></label>
+                            <input type="text" name="username" placeholder="Enter a username" required>
+                        </div>
+        
+                        <div class="cols">
+                            <label for="">Email <i class="required">*</i></label>
+                            <input type="email" name="user-email" placeholder="Your Email" required>
+                        </div>
+        
+                        <div class="cols">
+                            <label for="">Account Plan</label>
+                            <select name="account-plan" id="">
+                                <option id="default-plan" value="">Select Package</option>
+                                <option id="" value="starter">Starter Package --- $500 - $999</option>
+                                <option id="" value="silver">Silver Package --- $1000 - $2499</option>
+                                <option id="" value="gold">Gold Package --- $2500 - $6999</option>
+                                <option id="" value="platinum">Platinum Package --- $7000 - $9999</option>
+                                <option id="" value="vip">VIP Package --- $10000 - ABOVE</option>
+                            </select>
+                        </div>
+
+                        <div class="cols">
+                            <label for="">Password <i class="required">*</i></label>
+                            <input type="password" name="user-password" id="user-password" placeholder="Enter a strong password" required>
+                        </div>
+        
+                        <div class="cols">
+                            <label for="">Confirm Password</label>
+                            <input type="password" id="confirm-password" placeholder="Enter your password again">
+                        </div>
+        
+                        <div class="rows">
+                            <button class="strip-btn form-action-btn" onclick="nextPage(0)" disabled><i class="icofont-arrow-left"></i> Back</button>
+                            <span class="form-action-btn" onclick="nextPage(-1)">Proceed</span>
+                        </div>
+                    </div>
+
+                    <div class="form-pane">
+                        <div class="cols">
+                            <label for="">Country</label>
+                            <select name="user-country" id="">
+                                <option id="default-region" value="">Select Your Country</option>
+                            </select> 
+                        </div>
+
+                        <div class="cols">
+                            <label for="">State/Province/Region</label>
+                            <select name="user-region" id="">
+                                <option id="default-region" value="">--- Select ---</option>
+                            </select> 
+                        </div>
+
+                        <div class="cols">
+                            <label for="">Telcode</label>
+                            <select name="user-telcode" id="">
+                                <option id="default-code" value="">Select A Telcode</option>
+                            </select> 
+                        </div>
+
+                        <div class="cols">
+                            <label for="">Phone Number</label>
+                            <input type="tel" name="user-mobile" placeholder="Your Mobile Number">
+                        </div>
+        
+                        <div class="rows">
+                            <input type="checkbox">
+                            <label for="">Do you agree to our <a href="#">Privacy policy</a> and our <a href="#">Terms and Conditions</a> ?</label>
+                        </div>
+        
+                        <div class="rows">
+                            <span class="form-action-btn" onclick="nextPage(0)"><i class="icofont-arrow-left"></i> Back</span>
+                            <span class="form-action-btn" onclick="(function(){let conAns = confirm('Are you sure you want to submit? Note that you would not be able to edit your details after submission!'); if(conAns === true){nextPage(-2); payWithPaystack()};}())">Register</span>
+                        </div>
+                    </div>
+
+                    <div class="form-pane">
+                        <div class="cols" id="payment-gateway-status">Please wait while we connect you to our payment gateway...</div>
+                        <div class="rows">
+                            <input type="submit" class="form-action-btn" value="Complete Registration" disabled>
+                        </div>
+       
+                        <script>
+                            function payWithPaystack(){
+                                var handler = PaystackPop.setup({
+                                    key: 'pk_test_7f1ad0ac673d7195e92f7622b1f23500ee735cb0',
+                                    email: 'customer@email.com',
+                                    amount: 10000,
+                                    currency: "NGN",
+                                    ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+                                    metadata: {
+                                        custom_fields: [
+                                            {
+                                                display_name: "Mobile Number",
+                                                variable_name: "mobile_number",
+                                                value: "+2348012345678"
+                                            }
+                                        ]
+                                    },
+                                    callback: function(response){
+                                        // alert('success. transaction ref is ' + response.reference);
+                                        document.getElementById("payment-gateway-status").innerHTML = "Payment successful. Please check your email for your receipt.";
+                                        document.querySelector("input[type='submit']").removeAttribute("disabled");
+                                    },
+                                    onClose: function(){
+                                        document.getElementById("payment-gateway-status").innerHTML = "Payment could not be completed. Please reload the page and try again.";
+                                    }
+                                });
+                              handler.openIframe();
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="cols">
+        <div class="links rows">
+            <div class="cols">
+                <span class="heading"><img src="/assets/images/crest-logo.png" alt="" class="icon"></span>
+                <span class="heading">Contact:</span>
+                <a href="#">Address: 189 Greenwich st, New York, NY 10007, USA</a>
+                <a href="#">Email: support@cresttrades.com</a>
+                <a href="#">24/7 customer support and live chat</a>
+            </div>
+    
+            <div class="cols">
+                <span class="heading">Our Sectional Address</span>
+                <a href="#">Address: 234 Sherman Street Lawrence, KS 76044</a>
+                <a href="#">24/7 customer support and live chat</a>
+                <img src="./assets/images/SSS-Copy-Copy.png" alt="">
+            </div>
+
+            <div class="cols">
+                <a href="/">Home</a>
+                <a href="/support">Our Team</a>
+                <a href="#">Why we are different</a>
+                <a href="#">Terms and Condition</a>
+            </div>
+
+            <div class="cols">
+                <span class="heading">Our Payment Gateway</span>
+                <div class="rows">
+                    <img src="./assets/images/bitcoin-Copy-Copy.png"  alt="" class="pay-gateway">
+                    <img src="./assets/images/perfect-Copy-Copy.png" alt="" class="pay-gateway">
+                    <img src="./assets/images/skrill-Copy-Copy.png" alt="" class="pay-gateway">
+                    <img src="./assets/images/western-Copy-Copy.png" alt="" class="pay-gateway">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="fill-container">
+            <span class="rows">Copyright &copy; 2019 CrestTrades.com. All rights reserved</span>
+        </div>
+    </footer>
+</body>
+</html>

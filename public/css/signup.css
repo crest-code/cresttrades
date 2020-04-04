@@ -1,0 +1,258 @@
+body{
+    background-color: #f2f2f5;
+    overflow-x: hidden;
+    /* color: #ff4500; */
+}
+
+main{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0;
+    box-shadow: 1px 1px 3px rgba(224, 224, 229, 0.87);
+    background-color: #fafafd;
+}
+
+main *{
+    color: #3f3333;
+}
+
+main .form-wrapper{
+    position: relative;
+    width: 100%;
+    height: auto;
+    transition: height 0.3s ease;
+}
+
+main .form-wrapper > div:first-child{
+    width: 30%;
+    padding: 1.5rem;
+    margin-left: 1rem;
+    background-color: #0a0e41;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+main .form-wrapper > div:first-child *{
+    text-align: center;
+    color: #fff !important;
+}
+
+main .form-wrapper > div:first-child > *{
+    opacity: 0;
+    position: absolute;
+    max-width: 100%;
+}
+
+main .form-wrapper .pane-container{
+    position: relative !important;
+    width: 100%;
+    flex-wrap: wrap;
+    /* border: 1px solid green; */
+}
+
+main .form-wrapper .pane{
+    width: 80%;
+    height: 2.5rem;
+    margin-top: 1rem;
+    transform-origin: left;
+    /* padding: 2.5rem; */
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+main .form-wrapper > *:nth-child(2){
+    width: 70%;
+    overflow: hidden;
+    padding: 0 2.5rem;
+    /* border: 1px solid green; */
+}
+
+main .form-container, main .form-pane{
+    min-width: 100%;
+}
+
+main .form-container{
+    overflow-x: hidden;
+}
+
+main .form-pane{
+    padding: 0 0.3rem;
+    display:grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: auto auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sign-up-form .form-heading{
+    grid-column: 1/3;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    font-size: 2.5rem;
+}
+
+#sign-up-form input:disabled{
+    opacity: 0.5;
+}
+
+#sign-up-form input:not([type="submit"]), #sign-up-form select{
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 1.5rem 2rem;
+    margin: 0.9rem 0 2.5rem 0;
+    background-color: #f8f8fa;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+#sign-up-form input[type="checkbox"]{
+    display: inline-block;
+    width: auto;
+    border: 1px solid #ccc;
+    margin: 0;
+    margin-right: 1rem;
+    background-color: #f8f8fa;
+    border-radius: 2px;
+}
+
+#sign-up-form .form-pane div[class="rows"]{
+    padding: 1.5rem 0rem;
+    align-items: center;
+    grid-column: 1/3;
+}
+
+#sign-up-form input:focus:not([type="submit"]){
+    outline: none;
+    border-color:#ececec;
+    border-bottom: 2px solid #2961d8;
+    background-color: transparent;
+}
+
+#sign-up-form .form-action-btn{
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    width: 100%;
+    border: none;
+    border-radius: 2px;
+    background-color: #0a0e41;
+    color: #fcfcff;
+    padding: 1.5rem 2rem;
+    margin: 1.5rem 0.2rem 0.9rem 0.2rem;
+    box-shadow: 1px 1px 2px rgba(6, 8, 21, 0.66);
+}
+
+#sign-up-form .form-action-btn:hover{
+    cursor: pointer;
+}
+
+#sign-up-form .form-action-btn:disabled{
+    display: none;
+    
+}
+
+#sign-up-form .form-pane div:last-child{
+    grid-column: 1/3;
+}
+
+#sign-up-form .form-pane div:last-child > *:first-child{
+    background-color: #7a7a7a;
+}
+
+#sign-up-form .form-pane div:last-child > *:last-child{
+    background-color: #0a0e41;
+}
+
+#sign-up-form label{
+    font-weight: 500;
+    color: #444;
+    font-size: 12px;
+}
+
+#sign-up-form+div{
+    width: 35vw;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sign-up-form+div a{
+    color: #ff5638;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#sign-up-form #payment-gateway-status{
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+}
+
+@media only screen and (max-width:800px){
+    main h1{
+        text-align: center;
+        transform: unset;
+        /* margin-left: -3%; */
+        text-transform: capitalize;
+    }
+
+    main .form-wrapper{
+        flex-direction: column;
+    }
+
+    main .form-wrapper h1{
+        font-size: 1.5rem;
+    }
+
+    main .form-wrapper > div:first-child{
+        width: 100%;
+        padding: 1.5rem;
+        margin-left: 0;
+        margin: auto;
+    }
+
+    main .form-wrapper > *:nth-child(2){
+        width: 100%;
+    }
+
+    main form{
+        width: 90vw;
+        margin: 2rem auto 1rem auto;
+        transform: unset;
+        background-color: white;
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    }
+
+    main .form-pane{
+        grid-column-gap: 2rem;
+        grid-template-columns: auto;
+    }
+
+    #sign-up-form .form-pane div[class="rows"], 
+    #sign-up-form .form-pane div:last-child, 
+    #sign-up-form .form-heading, #sign-up-form .form-action-btn{
+        grid-column: 1/2;
+    }
+
+    
+    #sign-up-form label{
+        font-size: small;
+    }
+
+    #sign-up-form+div{
+        width: 80vw;
+    }
+}

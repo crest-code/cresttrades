@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CrestTrades | Advertisement</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/assets/icofont/icofont.min.css">
+    <script src="/js/lib/greensock/minified/gsap.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script>
+        const startAnimation = function(tl) {
+            const a = function() {
+                const element = document.querySelector(".form-wrapper [data-anim-container] h1:first-child");
+
+                return gsap.from(element, 1, {
+                    opacity: 0,
+                    top: "0%",
+                    left: "unset",
+                    onComplete: function() {
+                        gsap.to(element, 0.6, {opacity: 0, left: "0%", delay: 1.2, ease: Power2.easeIn});
+                    }
+                });
+            };
+
+            const b = function() {
+                const element = document.querySelector(".form-wrapper [data-anim-container] h1:nth-child(2)");
+                return gsap.from(element, 1, {
+                    opacity: 0,
+                    top: "unset",
+                    position: "absolute",
+                    delay: 2,
+                    onComplete: function() {
+                        gsap.to(element, 0.6, {
+                            top: "3%",
+                            delay: 1,
+                            onComplete: function() {
+                                gsap.to(element, 0.6, {opacity: 0});
+                            }
+                        });
+                    }
+                });
+            };
+
+            const c = function() {
+                const ctl = gsap.timeline();
+                const element = document.querySelectorAll(".form-wrapper .pane-container > *");
+
+                ctl.add(gsap.from(element, 0.7, {
+                        opacity: 0,
+                        width: "120%",
+                        x: "-50%",
+                        delay: 2,
+                        stagger: 2,
+                        ease: Power4.easeOut
+                    }))
+                    .add(gsap.to(element, 0.8, {
+                        opacity: 0,
+                        rotation: "-90deg",
+                        x: "-50%",
+                        delay: 1,
+                        stagger: 0.8,
+                        ease: Power3.easeIn
+                    }));
+                return ctl;
+            };
+
+            const d = function() {
+                const element = document.querySelector(".form-wrapper [data-anim-container] h1:nth-child(2)");
+                return gsap.to(element, 0.6, {opacity: 0, delay: 1.2, ease: Power2.easeIn});
+            };
+
+            const e = function() {
+                const element = document.querySelector(".form-wrapper [data-anim-container] h1:nth-child(3)");
+                return gsap.fromTo(element, 1, {opacity: 0, fontSize: "2rem"}, {opacity: 1,fontSize: "2.6rem", ease: Power2.easeIn});
+            };
+        
+            tl.add(gsap.set(document.querySelectorAll("main.form-wrapper > div:first-child > *"), {opacity: 1}))
+            .add(a())
+            .add(b())
+            .add(c())
+            .add(d())
+            .add(e());
+
+            return tl;
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const tl = gsap.timeline({repeat: 2, repeatDelay: 10, onRepeat: function() {
+                this.restart();
+            }});
+            startAnimation(tl);
+        });
+    </script>
+</head>
+<body>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-color: #f2f2f5;
+            overflow-x: hidden;
+        }
+
+        main{
+            display:flex;
+            flex-direction: column;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            box-shadow: 1px 1px 3px rgba(224, 224, 229, 0.87);
+            background-color: #fafafd;
+        }
+
+        main *{
+            color: #3f3333;
+        }
+
+        main.form-wrapper{
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            transition: height 0.3s ease;
+        }
+
+        main.form-wrapper [data-anim-container]{
+            width: 100%;
+            padding: 1.5rem;
+            margin: 0;
+            background-color: #0a0e41;
+            overflow: hidden;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main.form-wrapper [data-anim-container] *{
+            text-align: center;
+            color: #fff !important;
+        }
+
+        main.form-wrapper [data-anim-container] > *{
+            opacity: 0;
+            position: absolute;
+            max-width: 100%;
+        }
+
+        main.form-wrapper .pane-container{
+            position: relative !important;
+            width: 100%;
+            flex-wrap: wrap;
+            /* border: 1px solid green; */
+        }
+
+        main.form-wrapper .pane{
+            width: 80%;
+            height: 3.5rem;
+            margin-top: 1rem;
+            transform-origin: left;
+            /* padding: 2.5rem; */
+            background-color: #fff;
+            border-radius: 5px;
+        }
+
+        main.form-wrapper > *:nth-child(2){
+            width: 70%;
+            overflow: hidden;
+            padding: 0 2.5rem;
+            /* border: 1px solid green; */
+        }
+
+        main .form-container, main .form-pane{
+            min-width: 100%;
+        }
+
+        main .form-pane{
+            padding: 0 0.3rem;
+            display:grid;
+            grid-column-gap: 2rem;
+            grid-template-columns: auto auto;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+        }
+    </style>
+  
+    <main class="rows form-wrapper">
+        <div class="cols" data-anim-container>
+            <h1>Hi</h1>
+            <h1>Let's show you what we are all about</h1>
+            <h1>CrestTrades.com</h1>
+            <div class="cols pane-container">
+                <div class="pane"></div>
+                <h3>We help you grow</h3>
+                <div class="pane"></div>
+                <h3>We can make you financially free</h3>
+                <div class="pane"></div>
+                <h3>We are always here to support you</h3>
+            </div>
+            <!-- <noscript style="opacity: 1 !important; text-align: center; display: block;">Your browser doesnt support javascript</noscript> -->
+        </div>
+    </main>
+    
+</body>
+</html>

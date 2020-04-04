@@ -1,0 +1,482 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f2f2f5;
+    overflow-x: hidden;
+}
+
+main{
+    width: 100%;
+    padding: 0;
+}
+
+main .get-started{
+    display: inline-block;
+    border-radius: 5vh;
+    margin-top: 4rem;
+    padding: 1rem 3rem;
+    background-color: #0505da;
+    box-shadow: 1px 2px 3px rgba(34, 34, 209, 0.45);
+    color: white;
+    width: auto !important;
+}
+
+main .blink{
+    animation: blink 2s linear 0.5s infinite normal both;
+}
+
+main .banner{
+    width: 100%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 25%;
+    overflow: hidden;
+}
+
+main .banner .container{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    height: 50vmin;
+    max-height: 400px;
+}
+
+main .banner .pane{
+    position: absolute;
+    font-size: 5rem;
+    font-weight: bold;
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .banner .pane:first-child{
+    color: #f0f0f2;
+    font-size: 4.8rem;
+    text-shadow: 1px 3px 1px #ccc;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 10, 0.6), rgba(0, 0, 10, 0.6)), url("../assets/images/Group_people_wallpaper.jpg");
+    background-image: linear-gradient(rgba(0, 0, 10, 0.6), rgba(0, 0, 10, 0.6)), url("../assets/images/Group_people_wallpaper.jpg");
+}
+
+main .banner .pane:nth-child(2){
+    color: #f0f0f2;
+    text-shadow: 1px 3px 1px #ccc;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 10, 0.6), rgba(0, 0, 10, 0.6)), url("../assets/images/grayscale-photo-of-new-york-city-cityscape.jpg");
+    background-image: linear-gradient(rgba(0, 0, 10, 0.6), rgba(0, 0, 10, 0.6)), url("../assets/images/grayscale-photo-of-new-york-city-cityscape.jpg");
+}
+
+main .banner .pane:nth-child(3){
+    color: #f0f0f2;
+    text-shadow: 1px 3px 1px #ccc;
+    background-image: linear-gradient(rgba(0, 0, 10, 0.6), rgba(0, 0, 10, 0.6)), url("../assets/images/three-person-sitting-on-chair-near-table-inside-room.jpg");
+}
+
+main .banner .pane:nth-child(4){
+    background-color: #101010;
+}
+
+main .banner .pane:nth-child(4) span{
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6rem;
+    background-color: #101010;
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    background-image: url("../assets/images/images\(11\).jpeg");
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(240, 240, 242, 0.01);
+    -webkit-animation: shine 3.5s ease-in-out infinite;
+    animation: shine 3.5s ease-in-out infinite;
+}
+
+main .widget-container{
+    color: #FFF;
+    flex-wrap: wrap;
+    /* margin-top: 5vh; */
+    width: 100vw;
+    height: 45rem;
+    font-size: 1.3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: scroll;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../assets/images/1304036.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("../assets/images/1304036.jpg");
+}
+
+main .widget-container > div{
+    /* background-color: rgb(78, 126, 197); */
+}
+
+main .widget-container > div:first-child{
+    padding-left: 1rem;
+    text-align: center;
+    width: 69%;
+}
+
+main .widget-container > div:nth-child(2){
+    text-align: left;
+    justify-content: center;
+    font-weight: 500;
+    width: 31%;
+    padding: 0 1rem 0 1rem;
+}
+
+main .widget-container > div:last-child{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+main .widget-container > div:last-child a{
+    color: lightskyblue;
+}
+
+main [class*="-pane"]{
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+}
+
+main [class*="-pane"] *{
+    text-align: center;
+}
+
+main .intro-pane{
+    justify-content: center;
+}
+
+main .intro-pane .sub-heading{
+    line-height: 1.8;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+main .intro-pane .link-btn{
+    display: inline-block;
+    border-radius: 5vh;
+    margin-top: 4rem;
+    padding: 1rem 3rem;
+    background-color: #0505da;
+    box-shadow: 1px 2px 3px rgba(34, 34, 209, 0.45);
+    color: white;
+    width: auto !important;
+}
+
+main .benefit-pane{
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
+    border-radius: 80% 80% 0 0;
+    background-image: linear-gradient(rgb(236, 236, 239), transparent);
+}
+
+.benefit-pane .benefits{
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.benefit-pane .benefits .b-item{
+    justify-content: center;
+    margin: 0.5rem 4rem;
+    width: 22%;
+    min-width: 180px;
+    line-height: 1.5;
+}
+
+.benefit-pane .benefits .b-item:nth-child(2){
+    margin-top: 3rem;
+}
+
+.benefits .b-item .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid blue;
+    color: white;
+    font-size: 3.5rem;
+    border-radius: 50%;
+    background-color: blue;
+    width: 6rem;
+    height: 6rem;
+    margin:1rem auto 1rem;
+}
+
+.benefits .b-item .b-item-heading{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: blue;
+}
+
+.plans-pane{
+    justify-content: center;
+}
+
+.plans-pane .icofont-check, .plans-pane .icofont-close{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.plans-pane .icofont-check{
+    color: rgb(0, 165, 0);
+}
+
+.plans-pane .icofont-close{
+    color: red;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.plans-pane .plans-container{
+    color: #FFF;
+    background-color: rgb(39, 39, 39);
+    justify-content: center;
+    padding: 1rem;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: 8.8vh auto auto auto auto auto;
+}
+
+.plans-pane .plans-container .heading, .plans-pane .plans-container .sub-heading{
+    /* min-height: 10.8vmin; */
+    background-image: linear-gradient(rgb(19, 19, 19), rgb(5, 5, 5));
+}
+
+.plans-pane .plans-item:hover{
+    background-color: rgb(45, 45, 45);
+    transform: scale(1.08, 1.02);
+}
+
+.plans-pane .plans-container > *{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vmin;
+    padding: 2vmin;
+    height: 100%;
+}
+
+.plans-pane .plans-container .footing{
+    padding: 0.5vmin;
+    min-height: 8vmin;
+    background-color: silver;
+    background-image: linear-gradient(#888, #666);
+}
+
+.plans-pane .plans-container .footing a{
+    display: block;
+    color: #222;
+    font-weight: 500;
+    font-size: 1.85vmin;
+    border: 1px solid #666;
+    border-radius: 2px;
+    padding: 1.2vmin 4.25vmin;
+    background-color: #999;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.plans-pane .starter{
+    color: blueviolet !important;
+}
+
+.plans-pane .silver{
+    color: rgb(255, 255, 64) !important;
+}
+
+.plans-pane .gold{
+    color: yellowgreen !important;
+}
+
+.plans-pane .platinum{
+    color: green !important;
+}
+
+.plans-pane .vip{
+    color: white !important;
+}
+
+.stats-pane .stat-container{
+    justify-content: space-around;
+    width: 50%;
+    margin: auto;
+}
+
+.stats-pane .stat-item > span:first-child{
+    font-size: 3rem;
+    font-weight: 500;
+    color: purple;
+}
+
+main .testimonial-pane{
+    padding: 2rem 1rem 6rem;
+    color: white;
+    background-color: rgb(9, 8, 14);
+}
+
+.testimonial-pane .testimony-container{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.testimonial-pane .testimony-item{
+    transform-origin: left;
+    width: 30%;
+    max-width: 30rem;
+    border-radius: 2px;
+    padding: 2rem 1.5rem 2rem;
+    color: #111;
+    background-color: #f0f0f2;
+    margin: 0.8rem 1.5rem;
+    align-items: center;
+}
+
+.testimonial-pane .testimony-item img{
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid purple;
+    border-radius: 50%;
+
+}
+
+.testimonial-pane .testimony-item .test-name{
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 0.5rem auto 0.2rem;
+    color: #000;
+}
+
+.testimonial-pane .testimony-item .test-profession{
+    font-weight: 500;
+    margin: 0 auto 1rem;
+    color: #aaa;
+}
+
+.testimonial-pane .testimony-item .test-testimony{
+    line-height: 1.8;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.support-pane{
+    position: fixed;
+    left: 1rem;
+    bottom: 0.5rem;
+}
+
+.support-pane .support-image{
+
+    height: calc(4vh + 2rem);
+    width: calc(4vh + 2rem);
+    border-radius: 50%;
+}
+
+.support-pane .support-btn{
+    width: auto;
+    padding: 1.5rem 5rem;
+    border-radius: 6px;
+    background-color: rgb(35, 165, 31);
+    color: white;
+    font-size: 3.5vh;
+}
+
+@media only screen and (max-width:800px){
+    main .banner .pane{
+        width: 100vw;
+        height: 40vh;
+    }
+
+    main .intro-pane h1{
+        font-size: 2rem;
+    }
+
+    .benefit-pane .benefits .b-item{
+        width: 70%;
+    }
+
+    .benefits .b-item .b-item-heading{
+        margin-bottom: 1.1rem;
+    }
+    
+    
+    main .widget-container > div:nth-child(2){
+        text-align: left;
+        justify-content: center;
+    }
+
+    .plans-pane .plans-item .sub-heading{
+        height: 10.8vmax;
+    }
+
+    .stats-pane .stat-container{
+        width: 95%;
+    }
+
+    .stats-pane .stat-item > span:first-child{
+        font-size: 2.4rem;
+    }
+
+    .testimonial-pane .testimony-item{
+        width: 100%;
+        padding: 2rem 1.5rem 2rem;
+        margin: 0.8rem 1.5rem;
+    }
+}
+
+@-webkit-keyframes blink{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes shine{
+    0%{
+        background-position: -500%;
+    }
+
+    100%{
+        background-position: 500%;
+    }
+}
+
+@keyframes shine{
+    0%{
+        background-position: -500%;
+    }
+
+    100%{
+        background-position: 500%;
+    }
+}
