@@ -1,9 +1,10 @@
 const model = function() {
     const fs = require("fs");
-    const mysql_config =  require("./config");
-    const { log } = mysql_config;
-    const { emailSender } = require("./emailHandler");
     const ph = require("./passwordHash");
+    const mysql_config =  require("./config");
+    const { emailSender } = require("./emailHandler");
+    
+    const { log } = mysql_config;
 
     const readFile = function(path, req, res) {
         fs.readFile(path, "utf8", function(err, content) {
