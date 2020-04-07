@@ -80,8 +80,8 @@ const checkForQuery = function(){
             }
         }
         
-        if(queryParams.startUp_plan){
-            const selectOption = document.querySelector(`#sign-up-form select[name='account-plan'] option[value='${queryParams.startUp_plan}']`);            
+        if(queryParams.start_up_plan){
+            const selectOption = document.querySelector(`#sign-up-form select[name='account-plan'] option[value='${queryParams.start_up_plan}']`);            
             selectOption.setAttribute("selected", true);
         }
     }
