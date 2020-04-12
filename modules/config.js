@@ -42,7 +42,12 @@ const model = function(){
         database: "crest_db"
     });
 
-    const MONGO_URL = "mongodb://localhost:27017";
+    // const MONGO_URL = "mongodb://localhost:27017";
+
+
+    // REMOTE CONNECTION
+
+    const MONGO_URL = process.env.MONGO_CONNECTION_STRING;
 
     const mOptions = {
         useNewUrlParser: true,
