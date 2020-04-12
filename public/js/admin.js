@@ -49,11 +49,24 @@ const createUser = function(container, data) {
     container.appendChild(div0);
 };
 
+const addHandlers = function() {
+    const SIButton = document.querySelector("#SI-control");
+    const CAButton = document.querySelector("#CA-control");
+
+    SIButton.addEventListener("click", evt=>{document.querySelector(".main-body #admin-login-form #admin-username-1").focus()});
+    CAButton.addEventListener("click", evt=>{document.querySelector(".main-body #admin-create-form #admin-username-2").focus()});
+
+};
+
 document.addEventListener("DOMContentLoaded", function() {
     newContainer = document.querySelector("#new-container");
     allContainer = document.querySelector("#all-container");
 
     const apiUrl = '/api/allres';
+    if(getCookie("CTA-admin-ucode")){
+        // Fetch User data
+    }
+
     fetch(apiUrl).then(async response => {
         try {
             let result = await response.json();
@@ -91,6 +104,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }).catch(error => {
         console.error(error);
     });
+
+    addHandlers();
 
     // createUser(allContainer, {
     //     uID: "SJNJSANNASNQAJAA",

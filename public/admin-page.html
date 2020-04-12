@@ -53,7 +53,8 @@
             </div>
 
             <div>
-                <a href="#/logout" class="link-btn btn-logout">SIGN IN</a>
+                <button class="strip-btn" id="CA-control" title="Create Admin"><i class="icofont-user"></i></button>
+                <button class="strip-btn btn-logout" id="SI-control" style="font-size: 1.15rem;">SIGN IN</button>
             </div>
         </section>
 
@@ -65,10 +66,21 @@
                     <a href="#wallet">Wallet & Transactions</a>
                 </div>
 
-                <form class="cols">
-                    <input type="text" name="" id="" placeholder="username">
-                    <input type="password" name="" id="" placeholder="password">
-                    <input type="submit" value="Login">
+                <form id="admin-login-form" class="cols admin-form">
+                    <h3 class="heading">Admin Login</h3>
+                    <div id="admin-login-inputs" class="cols lg-100">
+                        <input type="text" name="admin-username" id="admin-username-1" class="admin-login" placeholder="Admin Username">
+                        <input type="password" name="admin-password" id="admin-pass-1" class="admin-login" placeholder="Password">
+                        <input type="submit" class="strip-btn" value="Login">
+                    </div>
+                    <div id= "admin-login-state" class="lg-100" style="text-align: center; display: none;">You are logged in</div>
+                </form>
+
+                <form id="admin-create-form" class="cols admin-form">
+                    <h3 class="heading">Create New Admin</h3>
+                    <input type="text" name="admin-username" id="admin-username-2" class="admin-login" placeholder="Admin Username">
+                    <input type="password" name="admin-password" id="admin-pass-2" class="admin-login" placeholder="Password">
+                    <input type="submit" class="strip-btn" value="Create Admin">
                 </form>
             </div>
 

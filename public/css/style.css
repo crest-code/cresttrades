@@ -95,6 +95,22 @@ form .serror{
     flex-direction: column;
 }
 
+.js-ctr{
+    justify-content: center;
+}
+
+.js-sb{
+    justify-content: space-between;
+}
+
+.js-sa{
+    justify-content: space-around;
+}
+
+.al-ctr{
+    align-items: center;
+}
+
 .grid > *{
     float: left;
 }

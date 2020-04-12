@@ -8,33 +8,33 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.replace("/login");
     }
 
-    try {
-        document.querySelector(".name-header .icofont-navigation-menu").addEventListener("click", function(evt) {
-            document.querySelector(".main-body .control-head").style.marginLeft = "0px";
-        });
+    // try {
+    //     document.querySelector(".name-header .icofont-navigation-menu").addEventListener("click", function(evt) {
+    //         document.querySelector(".main-body .control-head").style.marginLeft = "0px";
+    //     });
 
-        // document.querySelector("[name='country']").addEventListener("click", getCountries);
-        // document.querySelector("[name='country']").addEventListener("change", getRegion);
+    //     // document.querySelector("[name='country']").addEventListener("click", getCountries);
+    //     // document.querySelector("[name='country']").addEventListener("change", getRegion);
         
-        document.querySelector(".edit-btn").addEventListener("click", function(evt) {
-            document.querySelector("#profile-form").style.opacity = 1;
-            document.querySelector("#profile-form").style.height = "auto";
-            document.querySelector("#wallet-section").style.opacity = 0;
-            document.querySelector("#wallet-section").style.height = 0;
+    //     document.querySelector(".edit-btn").addEventListener("click", function(evt) {
+    //         document.querySelector("#profile-form").style.opacity = 1;
+    //         document.querySelector("#profile-form").style.height = "auto";
+    //         document.querySelector("#wallet-section").style.opacity = 0;
+    //         document.querySelector("#wallet-section").style.height = 0;
 
-        });
+    //     });
 
-        document.querySelector("#profile-form #minimize-form-btn").addEventListener("click", function(evt) {
-            document.querySelector("#profile-form").style.height = 0;
-            document.querySelector("#profile-form").style.opacity = 0;
-            document.querySelector("#wallet-section").style.opacity = 1;
-            document.querySelector("#wallet-section").style.height = "auto";
-        });
+    //     document.querySelector("#profile-form #minimize-form-btn").addEventListener("click", function(evt) {
+    //         document.querySelector("#profile-form").style.height = 0;
+    //         document.querySelector("#profile-form").style.opacity = 0;
+    //         document.querySelector("#wallet-section").style.opacity = 1;
+    //         document.querySelector("#wallet-section").style.height = "auto";
+    //     });
 
-        document.querySelector("#profile-form").addEventListener("submit", updateHandler);
-    } catch (error) {
-        console.error(error);
-    }
+    //     document.querySelector("#profile-form").addEventListener("submit", updateHandler);
+    // } catch (error) {
+    //     console.error(error);
+    // }
 });
 
 const getUserData = function(username){
@@ -59,15 +59,7 @@ const insertUserData = function(data) {
     const idDisplay = {
         firstname: document.querySelector("#user-fullname"),
         lastname: document.querySelector("#user-fullname"),
-        uID: document.querySelector("#uuid"),
         address: document.querySelector("#user-address")
-    };
-
-    const fields = {
-        firstname: document.querySelector("[name='firstname']"),
-        lastname: document.querySelector("[name='lastname']"),
-        email: document.querySelector("[name='email']"),
-        username: document.querySelector("[name='username']")
     };
 
     for (const key of Object.keys(data)) {
@@ -78,7 +70,6 @@ const insertUserData = function(data) {
                 case "firstname":
                     try{
                         idDisplay[key].innerHTML = data[key];
-                        fields[key].value = data[key];
                     }catch(err){
                         console.error(err);
                     }
@@ -87,16 +78,6 @@ const insertUserData = function(data) {
                 case "lastname":
                     try{
                         idDisplay[key].innerHTML = idDisplay[key].innerHTML + ` ${data[key]}`;
-                        fields[key].value = data[key];
-                    }catch(err){
-                        console.error(err);
-                    }
-                    break;
-
-                case "uID":
-                    try{
-                        idDisplay[key].innerHTML = data[key];
-                        document.querySelector("input[type='submit']").removeAttribute("disabled");
                     }catch(err){
                         console.error(err);
                     }
@@ -104,9 +85,7 @@ const insertUserData = function(data) {
 
                 default:
                     try{
-                        if(fields.hasOwnProperty(key) === true){
-                            fields[key].value = data[key];
-                        }else if(idDisplay.hasOwnProperty(key) === true){
+                        if(idDisplay.hasOwnProperty(key) === true){
                             idDisplay[key].innerHTML = data[key];
                         }
                     }catch(err){
@@ -114,7 +93,6 @@ const insertUserData = function(data) {
                     }
                     break;
             }
-            // document.querySelector("#sidemenu #user-photo").src = user_data.profile_picture;
         }
     }
 };
