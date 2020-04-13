@@ -34,18 +34,24 @@ const model = function(){
     // const queryTest = "SELECT * FROM users LIMIT 1";
 
     // LOCALHOST CONNECTION
-    const conn = mysql.createConnection({
-        host: 'localhost',
-    	port: 3306,
-        user: 'root',
-        password: '',
-        database: "crest_db"
-    });
+    // const conn = mysql.createConnection({
+    //     host: 'localhost',
+    // 	port: 3306,
+    //     user: 'root',
+    //     password: '',
+    //     database: "crest_db"
+    // });
 
     // const MONGO_URL = "mongodb://localhost:27017";
 
-
     // REMOTE CONNECTION
+    const conn = mysql.createConnection({
+        host: 'hcm4e9frmbwfez47.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+        port: 3306,
+        user: process.env.JAWSDB_USERNAME,
+        password: process.env.JAWSDB_PASSWORD,
+        database: "aslhqmy67ojw7kjb"
+    });
 
     const MONGO_URL = process.env.MONGO_CONNECTION_STRING;
 
